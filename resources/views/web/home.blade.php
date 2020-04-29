@@ -541,3 +541,1252 @@
     </div>
 
 @endsection
+
+@section("footer")
+
+    <div class="b-index-tasks-counter">
+
+        <div class="b-index-tasks-counter__items i-delitemer">
+            <span class="b-index-tasks-counter__item">6</span>
+            <span class="b-index-tasks-counter__item">6</span>
+            <span class="b-index-tasks-counter__item">5</span>
+            <span class="b-index-tasks-counter__item">5</span>
+            <span class="b-index-tasks-counter__item">5</span>
+            <span class="b-index-tasks-counter__item">3</span>
+            <span class="b-index-tasks-counter__item">2</span>
+        </div>
+        <p class="b-index-tasks-counter__text">
+            задания уже создано в этих категориях
+        </p>
+    </div>
+
+    <div class="b-index-tasks-categories">
+        <div class="b-index-tasks-categories__wrapper">
+            <ul class="b-index-tasks-categories__parent_items">
+
+
+                <li class="b-index-tasks-categories__parent_item">
+                    <a class="b-index-tasks-categories__parent_item__link" href="https://remont.youdo.com/">
+                        Бытовой ремонт
+                    </a>
+                    <span class="b-index-tasks-categories__parent_detailed js-index-tasks-categories__parent_detailed hidden">Подробнее</span>
+                    <ul class="b-index-tasks-categories__child_items js-index-tasks-categories__child_items hidden" id="category-338">
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://remont.youdo.com/minor-repair/">
+                                Мелкий бытовой ремонт
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://remont.youdo.com/repair/">
+                                Ремонт под ключ
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://remont.youdo.com/facing/">
+                                Отделочные работы
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://remont.youdo.com/plumbers/">
+                                Сантехнические услуги
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://remont.youdo.com/electrician/">
+                                Электрика
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://remont.youdo.com/furniture/">
+                                Сборка и ремонт мебели
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://remont.youdo.com/doors/">
+                                Установка и ремонт дверей
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://remont.youdo.com/tile/">
+                                Укладка плитки
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://remont.youdo.com/plitochniki/">
+                                Плиточники
+                            </a>
+
+
+                        </li>
+                    </ul>
+
+                </li>
+                <li class="b-index-tasks-categories__parent_item">
+                    <a class="b-index-tasks-categories__parent_item__link" href="https://courier.youdo.com/">
+                        Курьерские услуги
+                    </a>
+                    <span class="b-index-tasks-categories__parent_detailed js-index-tasks-categories__parent_detailed hidden">Подробнее</span>
+                    <ul class="b-index-tasks-categories__child_items js-index-tasks-categories__child_items" id="category-339">
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://courier.youdo.com/products-delivery/">
+                                Доставка продуктов
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://courier.youdo.com/drugs-delivery/">
+                                Доставка лекарств из аптеки
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://courier.youdo.com/store-delivery/">
+                                Доставка из магазина
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://courier.youdo.com/food-delivery/">
+                                Доставка еды
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://courier.youdo.com/courier-services/">
+                                Курьерская доставка
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://courier.youdo.com/documents-delivery/">
+                                Доставка документов
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://courier.youdo.com/gifts-delivery/">
+                                Доставка цветов и подарков
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://courier.youdo.com/driver/">
+                                Трезвый водитель
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://courier.youdo.com/zhivotnyh/">
+                                Доставка животных
+                            </a>
+
+
+                        </li>
+                    </ul>
+
+                </li>
+                <li class="b-index-tasks-categories__parent_item">
+                    <a class="b-index-tasks-categories__parent_item__link" href="https://youdo.com/ustanovka/">
+                        Установка бытовой техники
+                    </a>
+                    <span class="b-index-tasks-categories__parent_detailed js-index-tasks-categories__parent_detailed hidden">Подробнее</span>
+                    <ul class="b-index-tasks-categories__child_items js-index-tasks-categories__child_items" id="category-1849">
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/ustanovka/stiralnaya-mashina/">
+                                Стиральная машина
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/ustanovka/plita/">
+                                Плита
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/ustanovka/varochnaya-panel/">
+                                Варочная панель
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/ustanovka/duhovoi-shkaf/">
+                                Духовой шкаф
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/ustanovka/kondicioner/">
+                                Кондиционер
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/ustanovka/posudomoechnaya-mashina/">
+                                Посудомоечная машина
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/ustanovka/vytyazhka/">
+                                Вытяжка
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/ustanovka/holodilnik/">
+                                Холодильник
+                            </a>
+
+
+                        </li>
+                    </ul>
+
+                </li>
+                <li class="b-index-tasks-categories__parent_item">
+                    <a class="b-index-tasks-categories__parent_item__link" href="https://youdo.com/remont-bitovoy-tehniki/">
+                        Ремонт бытовой техники
+                    </a>
+                    <span class="b-index-tasks-categories__parent_detailed js-index-tasks-categories__parent_detailed hidden">Подробнее</span>
+                    <ul class="b-index-tasks-categories__child_items js-index-tasks-categories__child_items" id="category-1850">
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/remont-bitovoy-tehniki/krupnaya/">
+                                Крупная техника
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/remont-bitovoy-tehniki/kuhonnaya/">
+                                Техника для кухни
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/remont-bitovoy-tehniki/ehlektronika/">
+                                Ремонт электроники
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/remont-bitovoy-tehniki/klimaticheskaya/">
+                                Климатическая техника
+                            </a>
+
+
+                        </li>
+                    </ul>
+
+                </li>
+                <li class="b-index-tasks-categories__parent_item">
+                    <a class="b-index-tasks-categories__parent_item__link" href="https://perevozki.youdo.com/">
+                        Грузоперевозки
+                    </a>
+                    <span class="b-index-tasks-categories__parent_detailed js-index-tasks-categories__parent_detailed hidden">Подробнее</span>
+                    <ul class="b-index-tasks-categories__child_items js-index-tasks-categories__child_items" id="category-3260">
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://perevozki.youdo.com/cars/">
+                                Аренда авто
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://perevozki.youdo.com/city/">
+                                Городские грузоперевозки
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://perevozki.youdo.com/international/">
+                                Международные грузоперевозки
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://perevozki.youdo.com/country/">
+                                Грузоперевозки по России
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://perevozki.youdo.com/pereezd/">
+                                Переезд
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://perevozki.youdo.com/passenger/">
+                                Пассажирские перевозки
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://perevozki.youdo.com/garbage/">
+                                Вывоз мусора
+                            </a>
+
+
+                        </li>
+                    </ul>
+
+                </li>
+                <li class="b-index-tasks-categories__parent_item">
+                    <a class="b-index-tasks-categories__parent_item__link" href="https://freelance.youdo.com/">
+                        Помощь фрилансеров
+                    </a>
+                    <span class="b-index-tasks-categories__parent_detailed js-index-tasks-categories__parent_detailed hidden">Подробнее</span>
+                    <ul class="b-index-tasks-categories__child_items js-index-tasks-categories__child_items" id="category-3494">
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://freelance.youdo.com/turnkey/">
+                                Сайты под ключ
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://freelance.youdo.com/design/">
+                                WEB-Дизайн
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://freelance.youdo.com/programming/">
+                                Программирование
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://freelance.youdo.com/verstka/">
+                                Верстка
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://freelance.youdo.com/administration/">
+                                Администрирование сервера
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://freelance.youdo.com/supportsite/">
+                                Поддержка сайтов
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://freelance.youdo.com/kontent/">
+                                Разработка контента
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://freelance.youdo.com/polygraphy/">
+                                Дизайн и полиграфия
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://freelance.youdo.com/marketing/">
+                                Маркетинг и реклама
+                            </a>
+
+                            <span class="b-index-tasks-categories__parent_detailed js-index-tasks-categories__parent_detailed">Подробнее</span>
+                            <ul class="b-index-tasks-categories__child_items js-index-tasks-categories__child_items hidden" id="category-6027">
+                                <li class="b-index-tasks-categories__child_item">
+                                    <a class="b-index-tasks-categories__child_item__link" href="https://freelance.youdo.com/marketing/seo/">
+                                        Оптимизация сайтов
+                                    </a>
+
+
+                                </li>
+                            </ul>
+
+                        </li>
+                    </ul>
+
+                </li>
+                <li class="b-index-tasks-categories__parent_item">
+                    <a class="b-index-tasks-categories__parent_item__link" href="https://photo.youdo.com/">
+                        Фото- и видео-услуги
+                    </a>
+                    <span class="b-index-tasks-categories__parent_detailed js-index-tasks-categories__parent_detailed hidden">Подробнее</span>
+                    <ul class="b-index-tasks-categories__child_items js-index-tasks-categories__child_items" id="category-4027">
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://photo.youdo.com/photo/">
+                                Услуги фотографов
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://photo.youdo.com/video/">
+                                Видеосъемка
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://photo.youdo.com/photoedit/">
+                                Обработка фото
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://photo.youdo.com/videoedit/">
+                                Монтаж видео
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://photo.youdo.com/digit/">
+                                Оцифровка
+                            </a>
+
+
+                        </li>
+                    </ul>
+
+                </li>
+                <li class="b-index-tasks-categories__parent_item">
+                    <a class="b-index-tasks-categories__parent_item__link" href="https://personal.youdo.com/">
+                        Домашний персонал
+                    </a>
+                    <span class="b-index-tasks-categories__parent_detailed js-index-tasks-categories__parent_detailed hidden">Подробнее</span>
+                    <ul class="b-index-tasks-categories__child_items js-index-tasks-categories__child_items" id="category-4984">
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://personal.youdo.com/nanny/">
+                                Няни
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://personal.youdo.com/sidelki/">
+                                Сиделки
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://personal.youdo.com/housekeeper/">
+                                Домработницы
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://personal.youdo.com/helper/">
+                                Помощники по дому и хозяйству
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://personal.youdo.com/pets/">
+                                Уход за домашними животными
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://personal.youdo.com/laundry/">
+                                Стирка и глажка
+                            </a>
+
+
+                        </li>
+                    </ul>
+
+                </li>
+                <li class="b-index-tasks-categories__parent_item">
+                    <a class="b-index-tasks-categories__parent_item__link" href="https://youdo.com/lawyer/">
+                        Юридические услуги
+                    </a>
+                    <span class="b-index-tasks-categories__parent_detailed js-index-tasks-categories__parent_detailed hidden">Подробнее</span>
+                    <ul class="b-index-tasks-categories__child_items js-index-tasks-categories__child_items" id="category-10868">
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/lawyer/advocate/">
+                                Адвокаты
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/lawyer/autolawyer/">
+                                Автоюристы
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/lawyer/documents/">
+                                Составление документов
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/lawyer/business/">
+                                Сопровождение бизнеса
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/lawyer/collection/">
+                                Взыскание задолженностей
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/lawyer/price/">
+                                Стоимость услуг
+                            </a>
+
+
+                        </li>
+                    </ul>
+
+                </li>
+                <li class="b-index-tasks-categories__parent_item">
+                    <a class="b-index-tasks-categories__parent_item__link" href="https://youdo.com/beauty/">
+                        Красота и здоровье
+                    </a>
+                    <span class="b-index-tasks-categories__parent_detailed js-index-tasks-categories__parent_detailed hidden">Подробнее</span>
+                    <ul class="b-index-tasks-categories__child_items js-index-tasks-categories__child_items" id="category-17525">
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/beauty/massage/">
+                                Массаж
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/beauty/epilation/">
+                                Эпиляция
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/beauty/sugaring/">
+                                Шугаринг
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/beauty/piercing/">
+                                Пирсинг
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/beauty/tattoo/">
+                                Татуировки
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/beauty/cosmetology/">
+                                Косметология
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/beauty/spa/">
+                                СПА процедуры
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/beauty/stylist/">
+                                Стилисты
+                            </a>
+
+
+                        </li>
+                    </ul>
+
+                </li>
+                <li class="b-index-tasks-categories__parent_item">
+                    <a class="b-index-tasks-categories__parent_item__link" href="https://youdo.com/apple/">
+                        Ремонт Apple
+                    </a>
+                    <span class="b-index-tasks-categories__parent_detailed js-index-tasks-categories__parent_detailed hidden">Подробнее</span>
+                    <ul class="b-index-tasks-categories__child_items js-index-tasks-categories__child_items" id="category-17526">
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/apple/iphone/">
+                                iPhone
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/apple/ipad/">
+                                iPad
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/apple/macbook/">
+                                MacBook
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/apple/appletv/">
+                                Apple TV
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/apple/imac/">
+                                iMac
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/apple/applewatch/">
+                                Apple Watch
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/apple/macmini/">
+                                Mac Mini
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/apple/ipod/">
+                                iPod
+                            </a>
+
+
+                        </li>
+                    </ul>
+
+                </li>
+                <li class="b-index-tasks-categories__parent_item">
+                    <a class="b-index-tasks-categories__parent_item__link" href="https://youdo.com/promo/">
+                        Услуги промоутеров
+                    </a>
+                    <span class="b-index-tasks-categories__parent_detailed js-index-tasks-categories__parent_detailed hidden">Подробнее</span>
+                    <ul class="b-index-tasks-categories__child_items js-index-tasks-categories__child_items" id="category-19012">
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/promo/promotions/">
+                                Проведение промо-акций
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/promo/surveys/">
+                                Проведение опросов
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/promo/reklama/">
+                                Распространение рекламы
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/promo/mysteryshopping/">
+                                Услуги тайного покупателя
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/promo/weddings/">
+                                Организация свадеб
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/promo/corporate/">
+                                Проведение корпоративов
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/promo/eventorganisation/">
+                                Организация мероприятий
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/promo/catering/">
+                                Услуги кейтеринга
+                            </a>
+
+
+                        </li>
+                    </ul>
+
+                </li>
+                <li class="b-index-tasks-categories__parent_item">
+                    <a class="b-index-tasks-categories__parent_item__link" href="https://spb.youdo.com/">
+                        Санкт-Петербург
+                    </a>
+                    <span class="b-index-tasks-categories__parent_detailed js-index-tasks-categories__parent_detailed hidden">Подробнее</span>
+                    <ul class="b-index-tasks-categories__child_items js-index-tasks-categories__child_items" id="category-19512">
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://spb.youdo.com/uborka/">
+                                Клининговые услуги
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://spb.youdo.com/remont/">
+                                Бытовой ремонт
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://spb.youdo.com/beauty/">
+                                Красота и здоровье
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://spb.youdo.com/courier/">
+                                Курьерские услуги
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://spb.youdo.com/photo/">
+                                Фото- и видео-услуги
+                            </a>
+
+
+                        </li>
+                    </ul>
+
+                </li>
+                <li class="b-index-tasks-categories__parent_item">
+                    <a class="b-index-tasks-categories__parent_item__link" href="https://ekb.youdo.com/">
+                        Екатеринбург
+                    </a>
+
+                </li>
+                <li class="b-index-tasks-categories__parent_item">
+                    <a class="b-index-tasks-categories__parent_item__link" href="https://youdo.com/auto/">
+                        Ремонт авто
+                    </a>
+                    <span class="b-index-tasks-categories__parent_detailed js-index-tasks-categories__parent_detailed hidden">Подробнее</span>
+                    <ul class="b-index-tasks-categories__child_items js-index-tasks-categories__child_items" id="category-48602">
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/auto/diagnostic/">
+                                Диагностика
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/auto/engine/">
+                                Ремонт двигателя
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/auto/kpp/">
+                                Ремонт КПП
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/auto/runninggear/">
+                                Ремонт ходовой части
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/auto/steeringsystem/">
+                                Ремонт рулевой системы
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/auto/brakesystem/">
+                                Ремонт тормозной системы
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/auto/fuelsystem/">
+                                Ремонт топливной системы
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/auto/exhaustsystem/">
+                                Ремонт выхлопной системы
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/auto/tireservice/">
+                                Шиномонтаж
+                            </a>
+
+
+                        </li>
+                    </ul>
+
+                </li>
+                <li class="b-index-tasks-categories__parent_item">
+                    <a class="b-index-tasks-categories__parent_item__link" href="https://youdo.com/coach/">
+                        Обучение
+                    </a>
+                    <span class="b-index-tasks-categories__parent_detailed js-index-tasks-categories__parent_detailed hidden">Подробнее</span>
+                    <ul class="b-index-tasks-categories__child_items js-index-tasks-categories__child_items" id="category-48978">
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/coach/repetitory/">
+                                Репетиторы
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/coach/logopeda/">
+                                Услуги логопеда
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/coach/studentam/">
+                                Помощь студентам
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/coach/inostrannye/">
+                                Иностранные языки
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/coach/personala/">
+                                Обучение персонала
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/coach/biznestrenery/">
+                                Бизнес тренеры
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/coach/sport/">
+                                Спорт
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/coach/muzyka/">
+                                Музыка
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/coach/vozhdenie/">
+                                Вождение
+                            </a>
+
+
+                        </li>
+                    </ul>
+
+                </li>
+                <li class="b-index-tasks-categories__parent_item">
+                    <a class="b-index-tasks-categories__parent_item__link" href="https://novosibirsk.youdo.com/">
+                        Новосибирск
+                    </a>
+
+                </li>
+                <li class="b-index-tasks-categories__parent_item">
+                    <a class="b-index-tasks-categories__parent_item__link" href="https://nnovgorod.youdo.com/">
+                        Нижний Новгород
+                    </a>
+
+                </li>
+                <li class="b-index-tasks-categories__parent_item">
+                    <a class="b-index-tasks-categories__parent_item__link" href="https://youdo.com/uborka/">
+                        Уборка
+                    </a>
+                    <span class="b-index-tasks-categories__parent_detailed js-index-tasks-categories__parent_detailed hidden">Подробнее</span>
+                    <ul class="b-index-tasks-categories__child_items js-index-tasks-categories__child_items" id="category-180206">
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/uborka/kvartir/">
+                                Квартиры
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/uborka/ofisov/">
+                                Офисы
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/uborka/zagorodnogo-doma/">
+                                Загородные дома
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/uborka/pomeshcheniy/">
+                                Прочие помещения
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/uborka/generalnaya/">
+                                Генеральная уборка
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/uborka/kompleksnaya/">
+                                Комплексная уборка
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/uborka/moyka-okon/">
+                                Мойка окон
+                            </a>
+
+
+                        </li>
+                    </ul>
+
+                </li>
+                <li class="b-index-tasks-categories__parent_item">
+                    <a class="b-index-tasks-categories__parent_item__link" href="https://youdo.com/roadhelp/">
+                        Помощь на дороге
+                    </a>
+                    <span class="b-index-tasks-categories__parent_detailed js-index-tasks-categories__parent_detailed hidden">Подробнее</span>
+                    <ul class="b-index-tasks-categories__child_items js-index-tasks-categories__child_items" id="category-190069">
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/roadhelp/opening/">
+                                Вскрытие автомобилей
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/roadhelp/alarms/">
+                                Отключение сигнализаций
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/roadhelp/starting/">
+                                Запуск двигателя
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/roadhelp/gas/">
+                                Подвоз бензина
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/roadhelp/battery/">
+                                Зарядка аккумулятора
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/roadhelp/prikurit/">
+                                Прикурить автомобиль
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/roadhelp/tire/">
+                                Услуги шиномонтажа
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/roadhelp/sekretki/">
+                                Снятие секреток
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/roadhelp/minor/">
+                                Мелкий ремонт авто
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/roadhelp/freight/">
+                                Грузовики
+                            </a>
+
+
+                        </li>
+                    </ul>
+
+                </li>
+                <li class="b-index-tasks-categories__parent_item">
+                    <a class="b-index-tasks-categories__parent_item__link" href="https://youdo.com/remont-kompyuterov/">
+                        Ремонт компьютеров
+                    </a>
+
+                </li>
+                <li class="b-index-tasks-categories__parent_item">
+                    <a class="b-index-tasks-categories__parent_item__link" href="https://youdo.com/repetitory/">
+                        Репетиторы
+                    </a>
+                    <span class="b-index-tasks-categories__parent_detailed js-index-tasks-categories__parent_detailed hidden">Подробнее</span>
+                    <ul class="b-index-tasks-categories__child_items js-index-tasks-categories__child_items" id="category-201374">
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/repetitory/inostrannye-yazyki/">
+                                Иностранные языки
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/repetitory/programmirovanie/">
+                                Программирование
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/repetitory/ege/">
+                                Подготовка к ЕГЭ
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/repetitory/oge/">
+                                Подготовка к ОГЭ
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/repetitory/muzyka/">
+                                Музыка
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/repetitory/vokal/">
+                                Вокал
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/repetitory/olimpiady/">
+                                Подготовка к олимпиадам
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/repetitory/dlya-shkolnikov/">
+                                Школа
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/repetitory/dlya-studentov/">
+                                ВУЗ
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/repetitory/podgotovka-k-shkole/">
+                                Подготовка к школе
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/repetitory/nachalnaya-shkola/">
+                                Начальная школа
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/repetitory/izo/">
+                                Изобразительное искусство
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/repetitory/rukodelie/">
+                                Рукоделие
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/repetitory/kompyuternaya-gramotnost/">
+                                Компьютерная грамотность
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/repetitory/other/">
+                                Другие предметы
+                            </a>
+
+
+                        </li>
+                    </ul>
+
+                </li>
+                <li class="b-index-tasks-categories__parent_item">
+                    <a class="b-index-tasks-categories__parent_item__link" href="https://youdo.com/remont-ehlektroniki/">
+                        Ремонт электроники
+                    </a>
+                    <span class="b-index-tasks-categories__parent_detailed js-index-tasks-categories__parent_detailed hidden">Подробнее</span>
+                    <ul class="b-index-tasks-categories__child_items js-index-tasks-categories__child_items" id="category-202319">
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/remont-ehlektroniki/audiotekhnika/">
+                                Ремонт аудиотехники
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/remont-ehlektroniki/video-audio/">
+                                Фото и видеотехника
+                            </a>
+
+
+                        </li>
+                        <li class="b-index-tasks-categories__child_item">
+                            <a class="b-index-tasks-categories__child_item__link" href="https://youdo.com/remont-ehlektroniki/telefony/">
+                                Телефон
+                            </a>
+
+
+                        </li>
+                    </ul>
+
+                </li>
+            </ul>
+        </div>
+    </div>
+
+@endsection
