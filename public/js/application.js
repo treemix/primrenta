@@ -1,4 +1,78 @@
 
+function MainApp() {
+
+    this.body = $(document).find("body");
+
+    this.top_menu_categories_block = false;
+
+    this.init();
+
+}
+
+MainApp.prototype = {
+
+    init: function () {
+        let _this = this;
+
+        _this.events();
+
+    },
+
+    events: function () {
+        let _this = this;
+
+
+
+        $(document).on("click", ".js-index-tasks-categories__parent_detailed", function (event) {
+            event.preventDefault();
+            $(this).addClass('hidden');
+            $(this).parent().find(".js-index-tasks-categories__child_items").removeClass('hidden');
+        });
+
+        $(document).on("click", ".open-menu-categories", function (event) {
+            event.preventDefault();
+            $(document).find(".top-menu-categories-block").show();
+            _this.top_menu_categories_block = true;
+        });
+
+
+        $(document).find(".top-menu-categories-block .parent-item").hover(function (event) {
+            event.preventDefault();
+            let _this_in = $(this);
+            $(document).find(".top-menu-categories-block .parent-item").removeClass("active");
+            _this_in.addClass('active');
+            _this_in.mouseout(function (event) {
+                event.preventDefault();
+                $(document).find(".top-menu-categories-block .parent-item").removeClass("active");
+            });
+            _this_in.find(".child").mouseout(function (event) {
+                event.preventDefault();
+                $(document).find(".top-menu-categories-block .parent-item").removeClass("active");
+            });
+            _this_in.find(".child").mouseover(function (event) {
+                event.preventDefault();
+                _this_in.addClass("active");
+            });
+        });
+
+
+        $(document).on("click", function (event) {
+            //event.preventDefault();
+
+            //console.log(event.target);
+            //console.log($(event.target).hasClass("open-menu-categories"));
+            if(!$(event.target).hasClass("open-menu-categories") && _this.top_menu_categories_block){
+                $(document).find(".top-menu-categories-block").hide();
+                _this.top_menu_categories_block = false;
+            }
+
+        });
+    },
+
+};
+
+let _MainApp = new MainApp();
+
 function MobileMenu() {
 
     this.ToggleMenuButton = $(document).find("#ToggleMenuButton");

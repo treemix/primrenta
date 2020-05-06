@@ -1,23 +1,32 @@
 @extends('layouts.web')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Dashboard</div>
+<section class="layout-task-start">
+    <h4 class="title">Выберите категорию задания</h4>
+    <ul class="list first-list">
+        @foreach($categories as $category)
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+            @if($category->parent_id === 0)
 
-                    You are logged in!
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+                <li class="item">
+                    <a class="icon i-{{$category->slug}}" href="{{url('/tasks/new/'.$category->slug)}}"></a>
+                    <a class="link" href="{{url('/tasks/new/'.$category->slug)}}">{{$category->name}}</a>
+
+                    <ul class="list inner-list">
+                    @foreach($categories as $parent_category)
+                        @if($parent_category->parent_id === $category->id)
+                                <li class="item">
+                                    <a class="link" href="{{url('/tasks/new/'.$category->slug.'/'.$parent_category->slug)}}">{{$parent_category->name}}</a>
+                                </li>
+                        @endif
+                    @endforeach
+                    </ul>
+
+                </li>
+
+            @endif
+
+        @endforeach
+    </ul>
+</section>
 @endsection

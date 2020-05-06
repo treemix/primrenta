@@ -63,7 +63,7 @@ class CategorySeeder extends Seeder
             ),
             'clerical' => array(
                 'name' => 'Ремонт и строительство',
-                'slug' => '',
+                'slug' => 'clerical',
                 'description' => 'Ремонт и строительство',
                 'parent' => array(
                     'repairsmall' => array(
