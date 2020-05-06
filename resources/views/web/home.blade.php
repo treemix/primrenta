@@ -150,7 +150,7 @@
             <div class="b-teasers__text">
                 <div class="b-teasers__title">Надежные исполнители</div>
                 <div class="b-teasers__description">
-                    «<span class="b-teasers__link">Проверенные исполнители</span>» подтвердили свои документы на&nbsp;YouDo.
+                    «<span class="b-teasers__link">Проверенные исполнители</span>» подтвердили свои документы.
                 </div>
             </div>
         </a>
@@ -166,7 +166,7 @@
         <a href="/youdo-for-business" class="b-teasers__item b-teasers__item--business">
             <div class="b-teasers__image i-lazy-visible lazyloaded"></div>
             <span class="b-teasers__text">
-        <div class="b-teasers__title">YouDo для бизнеса</div>
+        <div class="b-teasers__title">PrimRenta для бизнеса</div>
         <div class="b-teasers__description">
            Безналичная оплата <span class="b-teasers__link">бизнес-заданий</span> с&nbsp;предоставлением закрывающих документов.
         </div>
@@ -177,7 +177,7 @@
     <div class="b-index-hiw">
         <div class="b-index-hiw__wrapper">
             <div class="b-index-hiw__title">
-                С&nbsp;YouDo вы&nbsp;экономите на&nbsp;услугах до&nbsp;70%.<br>
+                С&nbsp;PrimRenta вы&nbsp;экономите на&nbsp;услугах до&nbsp;70%.<br>
                 Как это возможно?
             </div>
             <ol class="b-index-hiw__steps">
@@ -190,7 +190,7 @@
                     <p class="b-index-hiw__step__text js-index-track-ga-event"><a href="/tasks/new/courier/pedestrian">Создать задание</a></p>
                 </li>
                 <li class="b-index-hiw__step b-index-hiw__step--offer">
-                    <div class="b-index-hiw__step__title">Исполнители предложат вам свои услуги и&nbsp;цены</div>
+                    <div class="b-index-hiw__step__title">Исполнители предложат вам свои услуги и цены</div>
                     <div class="js-responsive-image i-no-preloader i-done">
                         <img class="b-index-hiw__step__pic" data-original="img/hiw-2.png" src="img/hiw-2.png" alt="" style="display: block;">
                     </div>
