@@ -16,6 +16,11 @@ Route::namespace('Admin')->group(function () {
 
     });
 
+    Route::prefix("users")->group(function(){
+        Route::get('/', 'UserController@index')->name('admin.users.index');
+        Route::get('/new', 'UserController@new')->name('admin.users.new');
 
+
+    });
 
 });

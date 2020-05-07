@@ -23,6 +23,8 @@ class RouteServiceProvider extends ServiceProvider
      */
     public const HOME = '/';
 
+    public const ADMIN = '/admin';
+
     /**
      * Define your route model bindings, pattern filters, etc.
      *
@@ -44,9 +46,11 @@ class RouteServiceProvider extends ServiceProvider
     {
         $this->mapApiRoutes();
 
-        $this->mapAdminRoutes();
+
 
         $this->mapWebRoutes();
+
+        $this->mapAdminRoutes();
 
     }
 

@@ -28,6 +28,18 @@ class LoginController extends Controller
      */
     protected $redirectTo = RouteServiceProvider::HOME;
 
+    protected function redirectTo()
+    {
+        if( auth()->user()->is_admin() == null){
+            return RouteServiceProvider::HOME;
+        }
+        if( auth()->user()->is_super_admin() == null){
+            return RouteServiceProvider::HOME;
+        }
+        $this->redirectTo = RouteServiceProvider::ADMIN;
+        return RouteServiceProvider::ADMIN;
+    }
+
     /**
      * Create a new controller instance.
      *

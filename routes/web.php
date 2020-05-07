@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Auth::routes();
+Auth::routes(['verify' => true]);
 
 
 Route::namespace('Web')->group(function () {
@@ -28,4 +28,5 @@ Route::namespace('Web')->group(function () {
     Route::get('/jobs/all', 'JobController@all')->name('jobs-all');
 
 });
+
 

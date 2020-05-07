@@ -55,6 +55,30 @@
                     </ul>
                 </li>
 
+                <li class="nav-item has-treeview {{ request()->is('admin/users*') ? 'menu-open' : '' }}">
+                    <a href="#" class="nav-link {{ request()->is('admin/users*') ? 'active' : '' }}">
+                        <i class="nav-icon fas fa-circle"></i>
+                        <p>
+                            Пользователи
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{url("admin/users")}}" class="nav-link {{ request()->is('admin/users') ? 'active' : '' }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Все пользователи</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{url("admin/users/new")}}" class="nav-link {{ request()->is('admin/users/new') ? 'active' : '' }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Создать пользователя</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
 
 
 
