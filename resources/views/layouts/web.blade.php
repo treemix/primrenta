@@ -20,10 +20,10 @@
 <body>
     <div id="app">
 
-        @include("components/web/mobile_top_navbar")
+        @include("web/components/mobile_top_navbar")
 
         <header id="header" class="block_header">
-            @include("components/web/top_navbar")
+            @include("web/components/top_navbar")
         </header>
 
 
@@ -32,7 +32,7 @@
         </main>
 
         <footer id="footer" class="b-footer">
-            @include("components/web/footer")
+            @include("web/components/footer")
             @yield('footer')
         </footer>
 

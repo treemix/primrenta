@@ -17,22 +17,25 @@
             <div class="row">
 
                 <div class="col-lg-12">
-                    <table class="table table-responsive- table-hover-" id="users-datatable" style="width: 100%;">
+                    <table class="table table-bordered table-hover" id="category-datatable">
                         <!-- Table head -->
-                        <thead class="grey white-text" style="width: 100%;">
+                        <thead class="grey white-text">
                         <tr>
                             <th>ID</th>
+                            <th>Parent ID</th>
                             <th>Name</th>
                             <th>Slug</th>
                             <th>Description</th>
 
-                            <th style="width: 25px;"></th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+                            <th>Edit Page</th>
                         </tr>
                         </thead>
                         <!-- Table head -->
 
                         <!-- Table body -->
-                        <tbody style="width: 100%;"></tbody>
+                        <tbody></tbody>
                         <!-- Table body -->
                     </table>
                 </div>

@@ -23,6 +23,7 @@ Route::namespace('Web')->group(function () {
     Route::get('/', 'HomeController@home')->name('home');
 
     Route::get('/tasks/new', 'TaskController@new')->name('tasks-new');
+    Route::get('/tasks/new/{cat}/{cat_child?}', 'TaskController@new_cat')->name('tasks-new');
     Route::get('/tasks/all', 'TaskController@all')->name('tasks-all');
     Route::get('/executors/all', 'ExecutorController@all')->name('executors-all');
     Route::get('/jobs/all', 'JobController@all')->name('jobs-all');

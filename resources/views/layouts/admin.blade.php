@@ -14,6 +14,10 @@
     <link href="{{ asset('admin-lte/plugins/fontawesome-free/css/all.min.css') }}" rel="stylesheet">
     <link href="{{ asset('admin-lte/fonts/SourceSansPro/SourceSansPro.css') }}" rel="stylesheet">
     <link href="{{ asset('admin-lte/fonts/ionicons/ionicons.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('admin-lte/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('admin-lte/plugins/datatables-responsive/css/responsive.bootstrap4.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('admin-lte/plugins/select2/css/select2.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('admin-lte/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css') }}" rel="stylesheet">
     <link href="{{ asset('admin-lte/css/adminlte.min.css') }}" rel="stylesheet">
     <link href="{{ asset('admin-lte/css/style.css') }}" rel="stylesheet">
 
@@ -52,6 +56,7 @@
 <script src="{{ asset('admin-lte/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js') }}" type="text/javascript"></script>
 <script src="{{ asset('admin-lte/plugins/datatables-responsive/js/dataTables.responsive.min.js') }}" type="text/javascript"></script>
 <script src="{{ asset('admin-lte/plugins/datatables-responsive/js/responsive.bootstrap4.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('admin-lte/plugins/select2/js/select2.full.min.js') }}" type="text/javascript"></script>
 
 
 <script src="{{ asset('admin-lte/js/adminlte.js') }}" type="text/javascript"></script>

@@ -29,6 +29,17 @@ class TaskController extends Controller
         return view('web.task.new', ['categories' => $categories]);
     }
 
+    public function new_cat(Request $request)
+    {
+
+        $cat = $request->route('cat');
+        $cat_child = $request->route('cat_child');
+
+        //dd($request->route('cat_child'));
+
+        return view('web.task.new_cat');
+    }
+
     public function all()
     {
         return view('web.task.all');

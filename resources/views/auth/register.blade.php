@@ -1,75 +1,65 @@
-@extends('layouts.app')
+@extends('layouts.web')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+<div class="register-form">
+    <div class="signin">
+        <div class="">
+            <div class="social">
+                <p class="social-title">Быстрая регистрация через:</p>
+                <ul class="social-items">
+                    <li class="social-item">
+                        <a class="Vk" href="/users/loginvk" title="Вконтакте"></a>
+                    </li>
+                    <li class="social-item">
+                        <a class="Ok" href="/users/loginodnoklassniki" title="Одноклассники"></a>
+                    </li>
+                    <li class="social-item">
+                        <a class="Ml" href="/users/loginmailru" title="Mail"></a>
+                    </li>
+                    <li class="social-item">
+                        <a class="Gp" href="/users/logingoogle" title="Google"></a>
+                    </li>
+                    <li class="social-item">
+                        <a class="Fb" href="" title="Facebook"></a>
+                    </li>
+                </ul>
+            </div>
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
-                        @csrf
+            <div class="auth">
+                <p class="auth-title">Или по электронной почте</p>
 
-                        <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
-
-                                @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
-
+                <form method="POST" action="{{ route('register') }}">
+                    @csrf
+                    <div class="auth-row">
+                        <div class="container">
+                            <label for="email" class="label">{{ __('E-Mail Address') }}</label>
+                            <div class="wrapper">
+                                <input id="email" type="email" class="input @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
                                 @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
+                                <span class="invalid-feedback" role="alert"> <strong>{{ $message }}</strong> </span>
                                 @enderror
                             </div>
+
                         </div>
+                    </div>
 
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+                    <button type="submit" class="auth-registration button wide m green"> Зарегистрироваться </button>
 
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
+                    <div class="auth-agree">
+                        <div class="container auth-checkbox">
+                            <input class="checkbox auth-agree-checkbox" type="checkbox" name="agree_terms" id="agree_terms" value="1" checked>
+                            <span class="checkbox-icon"></span>
+                            <label class="label" for="agree_terms">Я согласен с</label>
                         </div>
+                        <a class="auth-link" target="_blank" rel="noopener noreferrer" href="/terms">правилами сайта</a>
+                    </div>
 
-                        <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
-                            </div>
-                        </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+                </form>
+            </div>
+        </div>
+        <div>
+            <div class="toggle">
+                Уже зарегистрированы? <a href="{{ route('login') }}" class="link toggle-link blue" type="button">Войдите</a>
             </div>
         </div>
     </div>
