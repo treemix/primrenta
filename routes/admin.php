@@ -14,7 +14,7 @@ Route::namespace('Admin')->group(function () {
         Route::get('/new', 'CategoryController@getNew')->name('admin.categories.get.new');
         Route::post('/new', 'CategoryController@postNew')->name('admin.categories.post.new');
         Route::get('/edit/{id}', 'CategoryController@edit')->name('admin.categories.edit');
-        Route::post('/update/{id}', 'CategoryController@update')->name('admin.categories.update');
+        Route::post('/update', 'CategoryController@update')->name('admin.categories.update');
         Route::get('/delete/{id}', 'CategoryController@delete')->name('admin.categories.delete');
         Route::get('/edit-page/{id}', 'CategoryController@editPage')->name('admin.categories.edit.page');
         Route::get('/update-page/{id}', 'CategoryController@updatePage')->name('admin.categories.update.page');

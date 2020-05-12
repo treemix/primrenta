@@ -48,4 +48,13 @@
 
 @section("script")
 
+    <script>
+        (function ($) {
+            'use strict';
+
+            _GlobalCategory = new Category();
+
+
+        })(jQuery);
+    </script>
 @endsection

@@ -19,6 +19,7 @@
     <link href="{{ asset('admin-lte/plugins/select2/css/select2.min.css') }}" rel="stylesheet">
     <link href="{{ asset('admin-lte/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css') }}" rel="stylesheet">
     <link href="{{ asset('admin-lte/css/adminlte.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('admin-lte/grapesjs/css/grapes.min.css') }}" rel="stylesheet">
     <link href="{{ asset('admin-lte/css/style.css') }}" rel="stylesheet">
 
     @yield('stylesheet')
@@ -40,6 +41,39 @@
 
     <div class="content-wrapper">
 
+        <div class="container-fluid" style="padding-top: 30px;">
+            <div class="row">
+                <div class="col-lg-12">
+                    @if (session('success'))
+                        <div class="info-box info-box-success bg-success">
+                            <span class="info-box-icon"><i class="fas fa-exclamation-triangle"></i></span>
+                            <div class="info-box-content">
+                                <ul class="info-box-error-list" style="padding-top: 15px;">
+                                    <li>{{ session('success') }}</li>
+                                </ul>
+                            </div>
+                            <!-- /.info-box-content -->
+                        </div>
+                    @endif
+                </div>
+                <div class="col-lg-12">
+                    @if ($errors->any())
+                        <div class="info-box bg-danger">
+                            <span class="info-box-icon"><i class="fas fa-exclamation-triangle"></i></span>
+                            <div class="info-box-content">
+                                <ul class="info-box-error-list">
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                            <!-- /.info-box-content -->
+                        </div>
+                    @endif
+                </div>
+            </div>
+        </div>
+
         @yield('content')
 
     </div>
@@ -57,7 +91,7 @@
 <script src="{{ asset('admin-lte/plugins/datatables-responsive/js/dataTables.responsive.min.js') }}" type="text/javascript"></script>
 <script src="{{ asset('admin-lte/plugins/datatables-responsive/js/responsive.bootstrap4.min.js') }}" type="text/javascript"></script>
 <script src="{{ asset('admin-lte/plugins/select2/js/select2.full.min.js') }}" type="text/javascript"></script>
-
+<script src="{{ asset('admin-lte/grapesjs/grapes.min.js') }}"></script>
 
 <script src="{{ asset('admin-lte/js/adminlte.js') }}" type="text/javascript"></script>
 <script src="{{ asset('admin-lte/js/application.js') }}" type="text/javascript"></script>

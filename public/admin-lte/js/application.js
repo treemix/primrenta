@@ -1,4 +1,51 @@
 let _GlobalCategory = null;
+let _GlobalNewEditCategory = null;
+
+
+$.fn.selectElement = function (options) {
+    options = options || {};
+
+    this.on("update", function (event, data) {
+
+    });
+
+    return $(this).select2({
+        theme: 'bootstrap4',
+        allowClear: true,
+        debug: true,
+        placeholder: options.placeholder,
+        ajax: {
+            url: options.url,
+            headers: {
+                'X-CSRF-TOKEN': options.xsrf_token
+            },
+            dataType: 'json',
+            delay: 250,
+            data: function (params) {
+                options.keywords = params.term;
+                options.page = params.page;
+                return options;
+            },
+            processResults: function (data, params) {
+                params.page = params.page || 1;
+                return {
+                    results: $.map(data, function (item) {
+                        return {
+                            text: item.name,
+                            id: item.id
+                        }
+                    }),
+                    pagination: {
+                        more: (params.page * 20) < data.total_count
+                    }
+                };
+            },
+            cache: true
+        }
+    });
+};
+
+//////////////////////////////////
 
 function Category() {
 
@@ -7,7 +54,6 @@ function Category() {
 
     this.init();
 }
-
 Category.prototype = {
 
     init: function () {
@@ -91,53 +137,72 @@ Category.prototype = {
     }
 };
 
+//////////////////////////////////
 
+function NewEditCategory() {
+
+    this.parentCategoriesSelect = $(document).find('#parent_categories');
+    this.objParentCategoriesSelect = null;
+
+    this.init();
+}
+NewEditCategory.prototype = {
+    init: function () {
+        let _this = this;
+
+        _this.initParentCategoriesSelect();
+
+        _this.events();
+
+        $(document).trigger("select:init:change:by:input");
+    },
+
+    events: function () {
+        let _this = this;
+
+        _this.objParentCategoriesSelect.on("change", function (event) {
+            let _parent_id = $(this).find("option:selected").val();
+            let _parent_name = $(this).find("option:selected").text();
+            if(_parent_id === undefined){
+                _parent_id = 0;
+            }
+            $(document).find("input[name=parent_id]").val(_parent_id);
+            $(document).find("input[name=parent_name]").val(_parent_name);
+        });
+
+        $(document).on("select:init:change:by:input", function () {
+            let _parent_id = $(document).find("input[name=parent_id]").val();
+            let _parent_name = $(document).find("input[name=parent_name]").val();
+            if(parseInt(_parent_id) > 0){
+                let newOption = new Option(_parent_name, _parent_id, true, true);
+                _this.objParentCategoriesSelect.append(newOption);
+                _this.objParentCategoriesSelect.trigger('change');
+            }
+        });
+    },
+
+    initParentCategoriesSelect: function () {
+        let _this = this;
+        _this.objParentCategoriesSelect = _this.parentCategoriesSelect.selectElement({
+            placeholder: "Select category",
+            url: "/admin/ajax/categories/parent",
+            xsrf_token: window.xsrf_token
+        });
+    }
+
+};
 
 
 
 (function ($) {
     'use strict';
 
-    _GlobalCategory = new Category();
-
-
-    $(document).find('#parent_categories').select2({
-        theme: 'bootstrap4',
-        ajax: {
-            url: "/admin/ajax/categories/parent",
-            headers: {
-                'X-CSRF-TOKEN': window.xsrf_token
-            },
-            dataType: 'json',
-            delay: 250,
-            // data: function (params) {
-            //     return {
-            //         q: params.term, // search term
-            //         page: params.page
-            //     };
-            // },
-            processResults: function (data, params) {
-                // parse the results into the format expected by Select2
-                // since we are using custom formatting functions we do not need to
-                // alter the remote JSON data, except to indicate that infinite
-                // scrolling can be used
-                params.page = params.page || 1;
-
-                return {
-                    results: $.map(data, function (item) {
-                        return {
-                            text: item.name,
-                            id: item.id
-                        }
-                    }),
-                    pagination: {
-                        more: (params.page * 30) < data.total_count
-                    }
-                };
-            },
-            cache: true
-        },
-    })
+    let _info_box_success = $(document).find(".info-box-success");
+    if(_info_box_success.length > 0){
+        setTimeout(function () {
+            _info_box_success.hide();
+        }, 2000);
+    }
 
 
 })(jQuery);

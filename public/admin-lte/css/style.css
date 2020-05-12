@@ -1,4 +1,7 @@
-
+body, html {
+    height: 100%;
+    margin: 0;
+}
 .dataTables_wrapper label{
     width: 100%;
 }
@@ -7,4 +10,18 @@ div.dataTables_wrapper div.dataTables_filter input{
 }
 .content-wrapper{
     background-color: white!important;
+}
+.select2-container--bootstrap4 .select2-selection__clear{
+    padding-left: .38em;
+
+    background-color: #bf0100;
+}
+.select2-container--bootstrap4 .select2-selection__clear:hover {
+    background-color: red;
+}
+.info-box-error-list{
+    margin: 0;
+}
+.gjs-content{
+    height: 900px;
 }

@@ -3,6 +3,8 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class Category extends Model
 {
@@ -17,6 +19,9 @@ class Category extends Model
 
     protected $hidden = [ ];
 
-
+    public function parent(): HasOne
+    {
+        return $this->hasOne(Category::class, 'id', 'parent_id');
+    }
 
 }
