@@ -22,11 +22,34 @@ Auth::routes(['verify' => true]);
 Route::namespace('Web')->group(function () {
     Route::get('/', 'HomeController@home')->name('home');
 
-    Route::get('/tasks/new', 'TaskController@new')->name('tasks-new');
-    Route::get('/tasks/new/{cat}/{cat_child?}', 'TaskController@new_cat')->name('tasks-new');
-    Route::get('/tasks/all', 'TaskController@all')->name('tasks-all');
-    Route::get('/executors/all', 'ExecutorController@all')->name('executors-all');
-    Route::get('/jobs/all', 'JobController@all')->name('jobs-all');
+
+    Route::prefix("tasks")->group(function(){
+        Route::get('/categories', 'TaskController@getCategories')->name('get.tasks.categories');
+        Route::get('/new/{cat?}/{cat_child?}', 'TaskController@getNewTask')->name('get.tasks.new');
+
+
+
+        Route::get('/all', 'TaskController@all')->name('tasks.all');
+    });
+
+
+
+
+
+
+
+    Route::get('/executors/all', 'ExecutorController@all')->name('executors.all');
+    Route::get('/jobs/all', 'JobController@all')->name('jobs.all');
+
+
+    Route::prefix("ajax")->namespace('Ajax')->group(function(){
+        Route::prefix("categories")->group(function(){
+            Route::get('/parent', 'CategoryController@getParent');
+            Route::get('/child', 'CategoryController@getChild');
+
+        });
+
+    });
 
 });
 

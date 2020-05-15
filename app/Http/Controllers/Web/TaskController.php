@@ -22,18 +22,43 @@ class TaskController extends Controller
     }
 
 
-    public function new()
+    public function getNewTask(Request $request)
+    {
+        $cat = $request->route('cat');
+        $cat_child = $request->route('cat_child');
+
+        $category = Category::where("slug", $cat)->first();
+
+        if(empty($cat_child)){
+            $category_child = Category::where("parent_id", $category->id)->where("default", true)->first();
+            return redirect()->to("tasks/new/".$category->slug."/".$category_child->slug);
+        }
+
+        $category_child = Category::where("slug", $cat_child)->first();
+
+        $categories = Category::where("parent_id", 0)->get();
+        $categories_child = Category::where("parent_id", $category->id)->get();
+        return view('web.task.new', [
+            'category' => $category_child,
+            'categories' => $categories,
+            'categories_child' => $categories_child,
+            'category_id' => $category->id,
+            'category_parent_id' => $category_child->id,
+            'is_task_new' => true
+        ]);
+    }
+
+    public function getCategories()
     {
         $categories = Category::query()->get()->all();
 
-        return view('web.task.new', ['categories' => $categories]);
+        return view('web.task.categories', ['categories' => $categories]);
     }
 
     public function new_cat(Request $request)
     {
 
-        $cat = $request->route('cat');
-        $cat_child = $request->route('cat_child');
+
 
         //dd($request->route('cat_child'));
 

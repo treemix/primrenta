@@ -131,7 +131,7 @@
             </div>
 
         </div>
-        <a class="b-index-popular__toggle__btn" href="/tasks/new">Все категории</a>
+        <a class="b-index-popular__toggle__btn" href="{{route("get.tasks.categories")}}">Все категории</a>
     </div>
 
     <div class="b-teasers">

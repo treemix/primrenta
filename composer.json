@@ -38,6 +38,11 @@
         }
     },
     "autoload": {
+        "files": [
+            "helpers/functions.php",
+            "helpers/web.php",
+            "helpers/admin.php"
+        ],
         "psr-4": {
             "App\\": "app/"
         },

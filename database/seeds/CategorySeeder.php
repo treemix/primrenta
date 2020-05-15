@@ -58,6 +58,7 @@ class CategorySeeder extends Seeder
                         'name' => 'Другая посылка',
                         'slug' => 'courierother',
                         'description' => 'Другая посылка',
+                        'default' => true
                     )
                 ),
             ),
@@ -155,6 +156,7 @@ class CategorySeeder extends Seeder
                         'name' => 'Что-то другое',
                         'slug' => 'clericalother',
                         'description' => 'Что-то другое',
+                        'default' => true
                     )
                 )
             ),
@@ -212,6 +214,7 @@ class CategorySeeder extends Seeder
                         'name' => 'Другой груз',
                         'slug' => 'truckingother',
                         'description' => 'Другой груз',
+                        'default' => true
                     )
                 )
             ),
@@ -284,6 +287,7 @@ class CategorySeeder extends Seeder
                         'name' => 'Что-то другое',
                         'slug' => 'houseother',
                         'description' => 'Что-то другое',
+                        'default' => true
                     )
                 )
             ),
@@ -331,6 +335,7 @@ class CategorySeeder extends Seeder
                         'name' => 'Что-то другое',
                         'slug' => 'virtualassistantother',
                         'description' => 'Что-то другое',
+                        'default' => true
                     )
                 )
             ),
@@ -383,6 +388,7 @@ class CategorySeeder extends Seeder
                         'name' => 'Что-то другое',
                         'slug' => 'computerhelpother',
                         'description' => 'Что-то другое',
+                        'default' => true
                     )
                 )
             ),
@@ -430,6 +436,7 @@ class CategorySeeder extends Seeder
                         'name' => 'Что-то другое',
                         'slug' => 'promoother',
                         'description' => 'Что-то другое',
+                        'default' => true
                     )
                 )
             ),
@@ -487,6 +494,7 @@ class CategorySeeder extends Seeder
                         'name' => 'Что-то другое',
                         'slug' => 'designother',
                         'description' => 'Что-то другое',
+                        'default' => true
                     )
                 )
             ),
@@ -524,6 +532,7 @@ class CategorySeeder extends Seeder
                         'name' => 'Что-то другое',
                         'slug' => 'webdevelopmentother',
                         'description' => 'Что-то другое',
+                        'default' => true
                     )
                 )
             ),
@@ -566,6 +575,7 @@ class CategorySeeder extends Seeder
                         'name' => 'Что-то другое',
                         'slug' => 'photoshopother',
                         'description' => 'Что-то другое',
+                        'default' => true
                     )
                 )
             ),
@@ -663,6 +673,7 @@ class CategorySeeder extends Seeder
                         'name' => 'Что-то другое',
                         'slug' => 'techrepairother',
                         'description' => 'Что-то другое',
+                        'default' => true
                     )
                 )
             ),
@@ -705,6 +716,7 @@ class CategorySeeder extends Seeder
                         'name' => 'Что-то другое',
                         'slug' => 'healthandbeautyother',
                         'description' => 'Что-то другое',
+                        'default' => true
                     )
                 )
             ),
@@ -757,6 +769,7 @@ class CategorySeeder extends Seeder
                         'name' => 'Что-то другое',
                         'slug' => 'electronicrepairother',
                         'description' => 'Что-то другое',
+                        'default' => true
                     )
                 )
             ),
@@ -794,6 +807,7 @@ class CategorySeeder extends Seeder
                         'name' => 'Что-то другое',
                         'slug' => 'legaladviceother',
                         'description' => 'Что-то другое',
+                        'default' => true
                     )
                 )
             ),
@@ -891,6 +905,7 @@ class CategorySeeder extends Seeder
                         'name' => 'Что-то другое',
                         'slug' => 'teachingother',
                         'description' => 'Что-то другое',
+                        'default' => true
                     )
                 )
             ),
@@ -958,6 +973,7 @@ class CategorySeeder extends Seeder
                         'name' => 'Что-то другое',
                         'slug' => 'carother',
                         'description' => 'Что-то другое',
+                        'default' => true
                     )
                 )
             )
@@ -977,6 +993,7 @@ class CategorySeeder extends Seeder
                     $cat_parent->name = $item_parent['name'];
                     $cat_parent->slug = $item_parent['slug'];
                     $cat_parent->description = $item_parent['description'];
+                    $cat_parent->default = empty($item_parent['default']) ? false : $item_parent['default'];
                     $cat_parent->save();
                 }
             }

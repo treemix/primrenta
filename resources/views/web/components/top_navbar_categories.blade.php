@@ -1,6 +1,14 @@
-<div class="top-menu-categories-block" style="display: none;">
-    <ul class="parent-items">
-        @if(!empty($categories))
+@php
+
+if(empty($categories) && empty($is_task_new)){
+    $categories = get_task_categories();
+}
+
+@endphp
+
+@if(!empty($categories))
+    <div class="top-menu-categories-block" style="display: none;">
+        <ul class="parent-items">
             @foreach($categories as $category)
                 @if($category->parent_id === 0)
                     <li class="parent-item ">
@@ -21,8 +29,9 @@
                     </li>
                 @endif
             @endforeach
-        @endif
-    </ul>
-</div>
+        </ul>
+    </div>
+@endif
+
 
 

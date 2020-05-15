@@ -1,5 +1,118 @@
+$.fn.selectElement = function (options) {
+    options = options || {};
 
+    this.on("update", function (event, data) {
 
+    });
+
+    return $(this).select2({
+        theme: 'bootstrap4',
+        allowClear: true,
+        debug: true,
+        placeholder: options.placeholder,
+        ajax: {
+            url: options.url,
+            headers: {
+                'X-CSRF-TOKEN': options.xsrf_token
+            },
+            dataType: 'json',
+            delay: 250,
+            data: function (params) {
+                options.keywords = params.term;
+                options.page = params.page;
+                return options;
+            },
+            processResults: function (data, params) {
+                params.page = params.page || 1;
+                return {
+                    results: $.map(data, function (item) {
+                        return {
+                            text: item.name,
+                            id: item.id
+                        }
+                    }),
+                    pagination: {
+                        more: (params.page * 20) < data.total_count
+                    }
+                };
+            },
+            cache: true
+        }
+    });
+};
+function TaskNewCategory() {
+
+    this.parentCategorySelect = $(document).find('#category-parent');
+    this.childCategorySelect = $(document).find('#category-child');
+    this.objParentCategorySelect = null;
+    this.objChildCategorySelect = null;
+
+    this.init();
+}
+TaskNewCategory.prototype = {
+    init: function () {
+        let _this = this;
+
+        //_this.initParentCategorySelect();
+
+        _this.events();
+
+        //$(document).trigger("select:init:change:by:input");
+    },
+
+    events: function () {
+        let _this = this;
+
+        _this.parentCategorySelect.on("change", function (event) {
+            //$(document).trigger("select:category:refresh");
+            let _parent_slug = _this.parentCategorySelect.find("option:selected").attr("data-slug");
+            let _child_slug = _this.childCategorySelect.find("option:selected").attr("data-slug");
+
+            window.location.href = "/tasks/new/"+_parent_slug;
+        });
+        _this.childCategorySelect.on("change", function (event) {
+            //$(document).trigger("select:category:refresh");
+            let _parent_slug = _this.parentCategorySelect.find("option:selected").attr("data-slug");
+            let _child_slug = _this.childCategorySelect.find("option:selected").attr("data-slug");
+
+            window.location.href = "/tasks/new/"+_parent_slug+"/"+_child_slug;
+        });
+        //
+        // $(document).on("select:init:change:by:input", function () {
+        //     let _parent_id = $(document).find("input[name=parent_id]").val();
+        //     let _parent_name = $(document).find("input[name=parent_name]").val();
+        //     if(parseInt(_parent_id) > 0){
+        //         let newOption = new Option(_parent_name, _parent_id, true, true);
+        //         _this.objParentCategoriesSelect.append(newOption);
+        //         _this.objParentCategoriesSelect.trigger('change');
+        //     }
+        // });
+
+        $(document).on("select:category:refresh", function (event) {
+
+        });
+    },
+
+    initParentCategorySelect: function () {
+        let _this = this;
+        _this.objParentCategorySelect = _this.parentCategorySelect.selectElement({
+            placeholder: "Select category",
+            url: "/ajax/categories/parent",
+            xsrf_token: window.xsrf_token
+        });
+    },
+    initChildCategorySelect: function () {
+        let _this = this;
+        _this.objParentCategoriesSelect = _this.parentCategoriesSelect.selectElement({
+            placeholder: "Select category",
+            url: "/ajax/categories/child",
+            xsrf_token: window.xsrf_token
+        });
+    }
+
+};
+
+new TaskNewCategory();
 
 let request = function(options, callback) {
 // - request({ method: 'GET', data: { param: 1 } }, callback); // <--- REST API request to /api endpoint by default
@@ -223,7 +336,39 @@ jQuery( document ).ready(function($) {
         if ($(this).attr("type") === "text" && _is_visible_password === false) {
             $(this).attr("type", "password");
         }
-    })
+    });
 
+    $(document).on("click", ".navigation-link", function (event) {
+        if($(event.target).hasClass("is-disabled")) return false;
+    });
+
+    $(document).on("click", ".b-task-widget .b-task-block__faq__item", function (event) {
+        event.preventDefault();
+        let dialog_task_faq = $(document).find("#dialog-task-faq");
+        let _index = $(this).attr("data-faq");
+
+        dialog_task_faq.find(".faq-item-"+_index+" .b-task-block__faq__question").addClass("i-open");
+        dialog_task_faq.find(".faq-item-"+_index+" .b-task-block__faq__answer").removeClass("hidden");
+        $("body").addClass("i-dialog");
+        dialog_task_faq.fadeIn();
+    });
+
+    $(document).on("click", ".dialog .dialog__close.js-dialog-close", function (event) {
+        event.preventDefault();
+        let dialog_task_faq = $(document).find("#dialog-task-faq");
+
+        $("body").removeClass("i-dialog");
+        dialog_task_faq.fadeOut();
+
+        dialog_task_faq.find(".b-task-block__faq__question").removeClass("i-open");
+        dialog_task_faq.find(".b-task-block__faq__answer").addClass("hidden");
+    });
+
+    $(document).on("click", ".dialog .b-task-block__faq__item", function (event) {
+        let dialog_task_faq = $(document).find("#dialog-task-faq");
+        let _index = $(this).attr("data-faq");
+        dialog_task_faq.find(".faq-item-"+_index+" .b-task-block__faq__question").addClass("i-open");
+        dialog_task_faq.find(".faq-item-"+_index+" .b-task-block__faq__answer").removeClass("hidden");
+    });
 
 });

@@ -6,7 +6,8 @@
     </div>
     <div class="navigation">
         <ul class="navigation-items">
-            <li class="navigation-item "><a class="navigation-link open-menu-categories" href="/tasks/new">Создать задание</a></li>
+{{--            is-active--}}
+            <li class="navigation-item"><a class="navigation-link {{ request()->is('tasks/new*') ? 'is-disabled' : 'open-menu-categories' }}" href="{{route("get.tasks.new")}}">Создать задание</a></li>
             <li class="navigation-item"><a class="navigation-link" href="/tasks-all-any-all-1">Найти задания</a></li>
             <li class="navigation-item"><a class="navigation-link" href="/executors-courier">Исполнители</a></li>
             <li class="navigation-item"><a class="navigation-link" href="/jobs">Вакансии<div class="label-new"></div></a></li>
@@ -24,8 +25,6 @@
 
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;"> @csrf </form>
                 @endguest
-
-
             </span>
         </div>
     </div>

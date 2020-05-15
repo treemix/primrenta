@@ -14,6 +14,9 @@
 
 
     <!-- Styles -->
+    <link href="{{ asset('admin-lte/plugins/select2/css/select2.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('admin-lte/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/common.css') }}" rel="stylesheet">
     <link href="{{ asset('css/web.css') }}" rel="stylesheet">
     <link href="{{ asset('css/web-temp.css') }}" rel="stylesheet">
 </head>
@@ -38,8 +41,9 @@
 
     </div>
 
-    <script src="{{ asset('lib/jquery-3.4.1.min.js') }}" type="text/javascript" defer></script>
+    <script src="{{ asset('admin-lte/plugins/jquery/jquery.min.js') }}" type="text/javascript"></script>
     <script src="{{ asset('lib/popper.min.js') }}" type="text/javascript" defer></script>
+    <script src="{{ asset('admin-lte/plugins/select2/js/select2.full.min.js') }}" type="text/javascript"></script>
 {{--    <script src="{{ asset('lib/bootstrap-4.4.1/js/bootstrap.min.js') }}" type="text/javascript" defer></script>--}}
     <script src="{{ asset('js/application.js') }}" type="text/javascript" defer></script>
 
