@@ -49,6 +49,7 @@ class CategoryController extends BaseController
         return view('admin.categories.edit',[
             'id' => $id,
             'category' => $category,
+            'fields' => json_decode($category->fields)
         ]);
     }
 
@@ -56,9 +57,66 @@ class CategoryController extends BaseController
     {
         $id = $request->get('id');
         $category = Category::where('id', $id)->first();
+        $fields = array();
+
+        if($request->get('_control_dimensions_checkbox') === "on"){
+            $fields['dimensions'] = [
+                'show' => true,
+                'label' => $request->get('_control_dimensions_label'),
+                'placeholder' => [
+                    'weight' => $request->get('_control_dimensions_weight_placeholder'),
+                    'length' => $request->get('_control_dimensions_length_placeholder'),
+                    'width' => $request->get('_control_dimensions_width_placeholder'),
+                    'height' => $request->get('_control_dimensions_height_placeholder'),
+                ]
+            ];
+        }
+
+        if($request->get('_control_return_payment_checkbox') === "on"){
+            $_control_return_payment_hint = $request->get('_control_return_payment_hint');
+            $fields['return_payment'] = [
+                'show' => true,
+                'label' => $request->get('_control_return_payment_label'),
+                'hint' => (!empty($_control_return_payment_hint) ? $_control_return_payment_hint : ''),
+            ];
+        }
+
+        if($request->get('_control_cargo_cost_checkbox') === "on"){
+            $fields['cargo_cost'] = [
+                'show' => true,
+                'label' => $request->get('_control_cargo_cost_label'),
+                'hint' => $request->get('_control_cargo_cost_hint'),
+            ];
+        }
+
+        if($request->get('_control_payment_checkbox') === "on"){
+            $fields['payment'] = [
+                'show' => true
+            ];
+        }
+
+        if($request->get('_control_courier_transport_checkbox') === "on"){
+            $fields['courier_transport'] = [
+                'show' => true
+            ];
+        }
+
+        $_control_description_placeholder = $request->get('_control_description_placeholder');
+        $_control_description_hint = $request->get('_control_description_hint');
+        $fields['description'] = [
+            'placeholder' => (!empty($_control_description_placeholder) ? $_control_description_placeholder : ''),
+            'hint' => (!empty($_control_description_hint) ? $_control_description_hint : ''),
+        ];
 
         if($category != null){
-            $category->update($request->only(['parent_id', 'name', 'slug', 'description']));
+
+            $category->parent_id = $request->get('parent_id');
+            $category->name = $request->get('name');
+            $category->slug = $request->get('slug');
+            $category->description = $request->get('description');
+            $category->fields = json_encode($fields);
+            $category->save();
+
             return redirect()->route('admin.categories.index')->withSuccess(__('Category Update'));
         }
 

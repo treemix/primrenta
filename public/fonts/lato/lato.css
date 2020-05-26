@@ -95,7 +95,7 @@
     font-style: italic;
 }
 @font-face {
-    font-family: 'Lato';
+    font-family: 'LatoBlack';
     src: local('Lato Black'), local('Lato-Black'), url('latoblack.woff2') format('woff2'), url('latoblack.woff') format('woff'), url('latoblack.ttf') format('truetype');
     font-weight: 900;
     font-style: normal;

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="31px" height="31px" viewBox="0 0 31 31" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 41.1 (35376) - http://www.bohemiancoding.com/sketch -->
+    <title>7E80B3BE-1658-4145-8B49-5AAA33AD3A36</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <ellipse id="path-1" cx="15.5" cy="15.5" rx="15.5" ry="15.5"></ellipse>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="31" height="31" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <ellipse id="path-3" cx="11" cy="12" rx="3" ry="3"></ellipse>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="6" height="6" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+        <ellipse id="path-5" cx="20" cy="12" rx="3" ry="3"></ellipse>
+        <mask id="mask-6" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="6" height="6" fill="white">
+            <use xlink:href="#path-5"></use>
+        </mask>
+    </defs>
+    <g id="Процесс-сделки" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Secure-Deal" transform="translate(-12732.000000, -1403.000000)" stroke="#F5586B" stroke-width="2">
+            <g id="задание-не-выолнено,-отзыв-заказчика" transform="translate(12581.000000, 1320.000000)">
+                <g id="result/bad" transform="translate(151.000000, 83.000000)">
+                    <use id="Oval-2" mask="url(#mask-2)" xlink:href="#path-1"></use>
+                    <use id="Oval-3" mask="url(#mask-4)" fill="#F5586B" fill-rule="evenodd" xlink:href="#path-3"></use>
+                    <use id="Oval-3" mask="url(#mask-6)" fill="#F5586B" fill-rule="evenodd" xlink:href="#path-5"></use>
+                    <path d="M10,21 C10,21 11.4314987,21.9920551 15.1333333,21.9999538 C18.835168,22.0078525 21,21 21,21" id="Line" stroke-linecap="round" transform="translate(15.500000, 21.500000) rotate(180.000000) translate(-15.500000, -21.500000) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

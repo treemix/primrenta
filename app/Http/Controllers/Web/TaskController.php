@@ -40,6 +40,7 @@ class TaskController extends Controller
         $categories_child = Category::where("parent_id", $category->id)->get();
         return view('web.task.new', [
             'category' => $category_child,
+            'category_fields' => json_decode($category_child->fields),
             'categories' => $categories,
             'categories_child' => $categories_child,
             'category_id' => $category->id,

@@ -43,11 +43,16 @@ Route::namespace('Web')->group(function () {
 
 
     Route::prefix("ajax")->namespace('Ajax')->group(function(){
-        Route::prefix("categories")->group(function(){
+        Route::prefix("categories")->namespace('Category')->group(function(){
             Route::get('/parent', 'CategoryController@getParent');
             Route::get('/child', 'CategoryController@getChild');
 
         });
+        Route::prefix("media")->namespace('Media')->group(function(){
+            Route::post('/upload', 'MediaController@postUpload');
+
+        });
+
 
     });
 

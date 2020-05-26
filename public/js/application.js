@@ -1,3 +1,38 @@
+
+ymaps.ready(initAddressesMap);
+
+let addressesMap;
+
+function initAddressesMap () {
+
+    addressesMap = new ymaps.Map('NewTaskMapContainer', {
+        center: [55.76, 37.64], // Москва
+        zoom: 18,
+        minZoom: 3,
+        maxZoom: 18,
+        behaviors:["default"],
+        controls:[]
+    });
+
+    addressesMap.controls.add("zoomControl",{position:{top:10,left:10}});
+
+    //addressesMap.container.fitToViewport();
+
+    // $('#tabs').bind('tabsshow', function (event, ui) {
+    //     addressesMap.container.fitToViewport();
+    // });
+
+    ymaps.geocode("Нижний Новгород", {
+        results: 1
+    }).then(function (result) {
+        console.log(result);
+    },function (error) {
+        console.log(error);
+    });
+}
+
+
+
 $.fn.selectElement = function (options) {
     options = options || {};
 
@@ -42,10 +77,22 @@ $.fn.selectElement = function (options) {
 };
 function TaskNewCategory() {
 
-    this.parentCategorySelect = $(document).find('#category-parent');
-    this.childCategorySelect = $(document).find('#category-child');
+    this.document = $(document);
+    this.parentCategorySelect = this.document.find('#category-parent');
+    this.childCategorySelect = this.document.find('#category-child');
+    this.btnShowPrivateInfoBlock = this.document.find('.js-btnShowPrivateInfoBlock');
+    this.privateInfoBlock = this.document.find('.js-rowPrivateInfo');
+    this.btnAddressesAdd = this.document.find('.b-task-manage-addresses__add.js-btnAdd');
+    this.addressesItemsBlock = this.document.find('.b-task-manage-addresses__items.js-items');
+
+    this.btnUploaderMedia = this.document.find("#uploader_media_btn");
+    this.inputFileUploaderMedia = this.document.find("#uploader_media_input_file");
+
+
     this.objParentCategorySelect = null;
     this.objChildCategorySelect = null;
+
+
 
     this.init();
 }
@@ -88,9 +135,225 @@ TaskNewCategory.prototype = {
         //     }
         // });
 
+
+        _this.btnUploaderMedia.on("click", function (event) {
+            event.preventDefault();
+            _this.inputFileUploaderMedia.trigger("click");
+        });
+
+        _this.inputFileUploaderMedia.on("change", function (event) {
+            event.preventDefault();
+            let _progressBar = _this.document.find(".upload__progressbar");
+            const $_file = $(this)[0].files[0];
+            const $_type = $(this)[0].files[0].type;
+            let _error_block = _this.document.find(".upload__error");
+            console.log($_file.type);
+
+            if( $_type !== "image/png"
+                && $_type !== "image/jpeg"
+                && $_type !== "image/jpg"
+                && $_type !== "image/gif"
+                && $_type !== "image/bmp"
+                && $_type !== "video/mov"
+                && $_type !== "video/avi"
+                && $_type !== "video/flv"
+                && $_type !== "video/wmv"
+                && $_type !== "video/mpg"
+                && $_type !== "video/mp4"
+            ){
+                _error_block.html("ОШЫБКА!<br/> Тип файла должен быть jpeg, jpg, png, gif, bmp, mov, avi, flv, wmv, mpg, mp4.").removeClass("hidden");
+                setTimeout(()=>{_error_block.addClass("hidden");}, 2000);
+                return false;
+            }
+
+            if(parseInt($_file.size/1024/1024) > 100){
+                _error_block.html("ОШЫБКА!<br/> Размер файла должен быть максимум 100MB.").removeClass("hidden");
+                setTimeout(()=>{_error_block.addClass("hidden");}, 2000);
+                return false;
+            }
+
+            let formData = new FormData();
+            formData.append("file", $_file);
+            formData.append("type", $_type);
+            //TODO: нужно передать дополнительные параметры
+
+            _progressBar.removeClass("hidden");
+
+            $.ajax({
+                url: "/ajax/media/upload",
+                headers: {
+                    'X-CSRF-TOKEN': window.xsrf_token
+                },
+                type: 'POST',
+                data: formData,
+                //dataType: false,
+                //cache: false,
+                contentType: false,
+                processData: false,
+                error: function(data) {
+                    console.log(data);
+                    console.log("ERROR");
+                    _error_block.html("Ошыбка загрузки файла.").removeClass("hidden");
+                    setTimeout(()=>{_error_block.addClass("hidden");}, 2000);
+                },
+                xhr: function(){
+                    let xhr = $.ajaxSettings.xhr();
+                    xhr.upload.addEventListener('progress', function(evt){
+                        if(evt.lengthComputable) {
+                            let percentComplete = Math.ceil(evt.loaded / evt.total * 100);
+                            _progressBar.find(".b-progressbar__line").css({'width': percentComplete+'%'});
+                        }
+                    }, false);
+                    return xhr;
+                },
+                success: function (response) {
+                    setTimeout(()=>{_progressBar.addClass("hidden");}, 1000);
+
+                    console.log(response);
+                    if(response.error === undefined ){
+                        if(response.data){
+                            //_this.loadVideo(response.data.url);
+                            //_this.input_upload_video.val("");
+
+                        }
+                    }
+                    //$(document).find(".preloader-block").hide();
+                }
+            });
+
+        });
+
+        _this.document.find(".payment-newtask_row--passengers__items").on("click", ".newtask_row__toggle__link", function (event) {
+            event.preventDefault();
+            _this.document.find(".payment-newtask_row--passengers__items .newtask_row__toggle__item a").removeClass("i-active");
+            $(this).addClass("i-active");
+            _this.document.find("input[name=payment]").val($(this).attr("data-value"));
+        });
+
+        _this.document.find(".transport-newtask_row--passengers__items").on("click", ".newtask_row__toggle__link", function (event) {
+            event.preventDefault();
+            _this.document.find(".transport-newtask_row--passengers__items .newtask_row__toggle__item a").removeClass("i-active");
+            $(this).addClass("i-active");
+            _this.document.find("input[name=payment]").val($(this).attr("data-value"));
+        });
+
+        _this.document.find("select[name=date_type]").on("change", function (event) {
+            event.preventDefault();
+            console.log("change");
+            let _val = $(this).find("option:selected").val();
+            switch (_val) {
+                case 'need_start_date':
+                    _this.document.find(".b-task-manage-finish__wrap--period").removeClass("js-period-block");
+                    _this.document.find(".b-task-manage-finish__wrap--period").removeClass("i-end");
+                    _this.document.find(".b-task-manage-finish__wrap--period").addClass("js-extendedDate");
+                    _this.document.find(".b-task-manage-finish__wrap--period").addClass("i-begin");
+                    break;
+                case 'need_end_date':
+                    _this.document.find(".b-task-manage-finish__wrap--period").removeClass("js-period-block");
+                    _this.document.find(".b-task-manage-finish__wrap--period").removeClass("i-begin");
+                    _this.document.find(".b-task-manage-finish__wrap--period").addClass("js-extendedDate");
+                    _this.document.find(".b-task-manage-finish__wrap--period").addClass("i-end");
+                    break;
+                case 'need_period_date':
+                    _this.document.find(".b-task-manage-finish__wrap--period").removeClass("js-extendedDate");
+                    _this.document.find(".b-task-manage-finish__wrap--period").removeClass("i-begin");
+                    _this.document.find(".b-task-manage-finish__wrap--period").removeClass("i-end");
+                    _this.document.find(".b-task-manage-finish__wrap--period").addClass("js-period-block");
+                    break;
+            }
+        });
+
+        // $('#NeedBeginDay__Field').datepicker({
+        //     format: 'dd/mm/yyyy',
+        //     language: 'ru-RU',
+        //     orientation: 'bottom',
+        //     autoclose: false,
+        //         //useCurrent: true,
+        //         startDate: new Date().toLocaleDateString(),
+        //         //allowInputToggle: true,
+        //         //debug: false
+        // });
+
+        $('#NeedBeginDay__Field').datetimepicker({
+            format: 'L',
+            locale: 'ru',
+            useCurrent: true,
+            minDate: moment(new Date().toLocaleDateString(), 'L'),
+            //allowInputToggle: true,
+            //debug: true
+
+        });
+
+        $('#NeedBeginTime__Field').datetimepicker({
+            format: 'LT',
+            locale: 'ru',
+            useCurrent: true,
+            //allowInputToggle: false,
+            //debug: true
+        });
+
+        $('#NeedEndDay__Field').datetimepicker({
+            format: 'L',
+            locale: 'ru',
+            useCurrent: true,
+            minDate: moment(new Date().toLocaleDateString(), 'L'),
+            //allowInputToggle: true,
+            //debug: true
+        });
+
+        $('#NeedEndTime__Field').datetimepicker({
+            format: 'LT',
+            locale: 'ru',
+            useCurrent: true,
+            //allowInputToggle: true,
+            //debug: true
+        });
+
         $(document).on("select:category:refresh", function (event) {
 
         });
+
+        $(document).on("select:category:refresh", function (event) {
+
+        });
+
+        _this.btnShowPrivateInfoBlock.on("click", function (event) {
+            event.preventDefault();
+            if(_this.privateInfoBlock.hasClass("hidden")){
+                _this.privateInfoBlock.removeClass("hidden");
+            }else {
+                _this.privateInfoBlock.addClass("hidden");
+            }
+        });
+
+        _this.privateInfoBlock.on("click", ".js-hide", function (event) {
+            event.preventDefault();
+            if(!_this.privateInfoBlock.hasClass("hidden")){
+                _this.privateInfoBlock.addClass("hidden");
+            }
+        });
+
+
+
+        _this.btnAddressesAdd.on("click", function (event) {
+            event.preventDefault();
+
+        });
+
+        _this.addressesItemsBlock.on("click", "[data-ga=searchGeolocation]", function (event) {
+            event.preventDefault();
+            navigator.geolocation.getCurrentPosition(function (result) {
+                console.log(result);
+                ymaps.geocode("Москва").then(function (result) {
+                    console.log(result);
+                }).catch(function (result) {
+                    console.log(result);
+                });
+            });
+
+        });
+
+
     },
 
     initParentCategorySelect: function () {
@@ -357,18 +620,34 @@ jQuery( document ).ready(function($) {
         event.preventDefault();
         let dialog_task_faq = $(document).find("#dialog-task-faq");
 
-        $("body").removeClass("i-dialog");
+
         dialog_task_faq.fadeOut();
 
-        dialog_task_faq.find(".b-task-block__faq__question").removeClass("i-open");
-        dialog_task_faq.find(".b-task-block__faq__answer").addClass("hidden");
+        setTimeout(function () {
+            dialog_task_faq.find(".b-task-block__faq__question").removeClass("i-open");
+            dialog_task_faq.find(".b-task-block__faq__answer").addClass("hidden");
+            $("body").removeClass("i-dialog");
+        }, 500);
+
     });
 
     $(document).on("click", ".dialog .b-task-block__faq__item", function (event) {
+        event.preventDefault();
         let dialog_task_faq = $(document).find("#dialog-task-faq");
         let _index = $(this).attr("data-faq");
         dialog_task_faq.find(".faq-item-"+_index+" .b-task-block__faq__question").addClass("i-open");
         dialog_task_faq.find(".faq-item-"+_index+" .b-task-block__faq__answer").removeClass("hidden");
     });
+
+
+
+
+    let tippyInstances = tippy('.js-hint',{
+        allowHTML: true,
+        placement: 'right',
+        delay: 100,
+        interactive: true
+    });
+
 
 });
