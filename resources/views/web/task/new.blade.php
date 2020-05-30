@@ -1,5 +1,7 @@
 @extends('layouts.web')
 
+
+
 @section('content')
 <section class="layout-task-new app-action-newtask layout-new-task layout-responsive">
     <div class="task-new-header newtask_header js-headerContainer">

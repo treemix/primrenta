@@ -1,7 +1,29 @@
 
-ymaps.ready(initAddressesMap);
-
 let addressesMap;
+
+
+if(window.app !== undefined && window.app.map_container !== undefined){
+    if(window.app.is_home !== undefined && window.app.is_home === true){
+        ymaps.ready(initHomeMap);
+    }else if(window.app.is_task_new !== undefined && window.app.is_task_new === true){
+        ymaps.ready(initAddressesMap);
+    }
+
+
+
+}
+
+function initHomeMap() {
+    addressesMap = new ymaps.Map(window.app.map_container, {
+        center: [55.76, 37.64], // Москва
+        zoom: 10,
+        minZoom: 3,
+        maxZoom: 18,
+        behaviors:["default"],
+        controls:[]
+    });
+}
+
 
 function initAddressesMap () {
 

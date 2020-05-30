@@ -7,10 +7,10 @@
     <div class="navigation">
         <ul class="navigation-items">
 {{--            is-active--}}
-            <li class="navigation-item"><a class="navigation-link {{ request()->is('tasks/new*') ? 'is-disabled' : 'open-menu-categories' }}" href="{{route("get.tasks.new")}}">Создать задание</a></li>
-            <li class="navigation-item"><a class="navigation-link" href="/tasks-all-any-all-1">Найти задания</a></li>
+            <li class="navigation-item"><a class="navigation-link {{ request()->is('tasks/new*') ? 'is-disabled' : 'open-menu-categories' }}" href="{{route("get.tasks.new")}}">Создать Задание</a></li>
+            <li class="navigation-item"><a class="navigation-link" href="/tasks-all-any-all-1">Найти Задания</a></li>
             <li class="navigation-item"><a class="navigation-link" href="/executors-courier">Исполнители</a></li>
-            <li class="navigation-item"><a class="navigation-link" href="/jobs">Вакансии<div class="label-new"></div></a></li>
+            <li class="navigation-item"><a class="navigation-link" href="/jobs">Вакансии</a></li>
         </ul>
         @include("web/components/top_navbar_categories")
     </div>
@@ -19,7 +19,7 @@
         <div class="block">
             <span class="wrapper">
                 @guest
-                    <a class="link" href="{{ route('login') }}">Вход</a> или <a class="link" href="{{ route('register') }}">регистрация</a>
+                    <a class="link" href="{{ route('login') }}">Вход</a> / <a class="link" href="{{ route('register') }}">Регистрация</a>
                 @else
                     <a class="link" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> Выйти </a>
 

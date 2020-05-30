@@ -31,8 +31,10 @@
         @endif
     </script>
 
+    @yield("head_script")
+
 </head>
-<body>
+<body class=" @yield('body-class') ">
     <div id="app">
 
         @include("web/components/mobile_top_navbar")
@@ -49,6 +51,11 @@
         <footer id="footer" class="b-footer">
             @include("web/components/footer")
             @yield('footer')
+
+            <div class="b-footer__copyright">
+                © 2020 PodRabot <span>(podrabot.com, podrabot.ru)</span> · <a href="{{url("/terms")}}">Правила сервиса</a>
+            </div>
+
         </footer>
 
     </div>

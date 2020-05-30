@@ -1,5 +1,5 @@
 
-<div class="b-footer__wrapper">
+<div class="b-footer__wrapper hidden">
     <div class="b-footer__row-sk">
         <a href="http://sk.ru/" class="b-footer__sk" target="_blank"></a>
     </div>
@@ -27,9 +27,5 @@
             <a class="btn b-btn-download-app i-android i-android--RU js-appsfm-href" href="#" target="_blank"></a>
         </div>
     </div>
-    <div class="b-footer__row">
-        <div class="b-footer__copyright">
-            © 2020 PrimRenta <span>(primrenta.com, primrenta.ru, primrenta.рф)</span> · <a href="/terms">Правила сервиса</a>
-        </div>
-    </div>
+
 </div>
